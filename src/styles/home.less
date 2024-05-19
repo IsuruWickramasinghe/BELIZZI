@@ -1,0 +1,253 @@
+.home-banner{
+  width: 100%;
+  height: 85dvh;
+  img{
+    width: 100%;
+    height: 100%;
+    object-fit:cover;
+  }
+}
+
+.home-container{
+  padding: var(--sp-xl);
+  color: var(--clr-title);
+  width: 100%;
+  .title{
+    font-weight: 600;
+    letter-spacing: 3px;
+  }
+}
+
+.home-products{
+  display: grid;
+  place-items: center;
+  gap: var(--sp-xl);
+  justify-content: space-around;
+  text-align: center;
+  background-color: var(--clr-body);
+  padding-bottom: 64px;
+  
+  h2{
+    letter-spacing: 2px;
+  }
+  
+  .home-products-items{
+    max-width: 1366px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--sp-m);
+    justify-content: space-evenly;
+    align-items: flex-start;
+    color: #636116;
+    
+    .item{
+      background-color: #fff;
+      width: 350px;
+      height: 450px;
+      box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
+      border-radius: var(--sp-xl);
+      padding: var(--sp-xl);
+      display: grid;
+      place-items: center;
+      transition: .3s all;
+      cursor: pointer;
+
+      &:hover{
+        rotate: 3deg;
+        outline: auto;
+      }
+
+      img{
+        width: 100%;
+        height: 150px;
+      }
+      p{
+        width: 100%;
+      }
+    }
+  }
+}
+
+.section-one{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  gap: var(--sp-xl);
+  width: 100%;
+  padding: var(--sp-l);
+
+  .section-img-wrapper{
+    max-width: 450px;
+    width: 45%;
+    overflow: hidden;
+    border-radius: var(--sp-l);
+    img{
+      width: 100%;
+    }
+
+  }
+  .home-desc{
+    max-width: 450px;
+    width: 45%;
+    font-size: var(--fs-l);
+    letter-spacing: 2px;
+    color: #636116;
+    b{
+      font-size: var(--fs-xxl);
+    }
+  }
+}
+
+.section-two{
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--sp-l);
+  align-items: center;
+  justify-content: center;
+  padding: var(--sp-xl);
+
+  .side-left{
+    width: 45%;
+    .sets{
+      margin-top: var(--sp-xl);
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      padding: var(--sp-m);
+      gap: var(--sp-xl);
+      div{
+        padding: var(--sp-m);
+        border-radius: var(--sp-s);
+        width: 45%;
+        box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+        transition: .5s all;
+        cursor: pointer;
+        &:hover{
+          scale: 1.1;
+          box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+        }
+      }
+    }
+  }
+
+  .side-right{
+
+    max-width: 550px;
+    width: 100%;
+    padding: var(--sp-l);
+    border: 5px solid var(--clr-body);
+    border-radius: var(--sp-m);
+    transition: .5s all;
+    img{
+      width: 100%;
+    }
+    &:hover{
+      scale: .8;
+      rotate: -25deg;
+    }
+  }
+}
+
+footer{
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--sp-xl);
+  width: 100%;
+  min-height: 250px;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: var(--sp-xl);
+  background-color: var(--clr-main);
+  color: var(--clr-body);
+
+  .contact{
+    display: grid;
+    gap: var(--sp-l);
+
+    .icons{
+      display: flex;
+      justify-content: center;
+      font-size: var(--fs-xxl);
+      gap: var(--sp-xl);
+      cursor: pointer;
+    }
+  }
+
+  .footer-cards{
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--sp-m);
+    padding: var(--sp-m);
+    border: 2px solid var(--clr-body);
+    border-radius: var(--sp-s);
+    justify-content: space-evenly;
+    align-items: center;
+    cursor: pointer;
+
+    div{
+      width: 45%;
+    }
+
+    .card-two{
+      display: grid;
+      gap: var(--sp-m);
+      justify-items: end;
+
+      .mail-box{
+        background-color: transparent;
+        outline: 2px solid var(--clr-body);
+        border: none;
+        border-radius: var(--sp-l);
+        padding: var(--sp-s);
+        font-size: var(--fs-m);
+        color: var(--clr-body);
+        width: 100%;
+
+        &:focus{
+          outline: 2px solid var(--clr-body);
+        }
+      }
+      .btn{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: var(--sp-s);
+        width: 50%;
+        font-size: var(--fs-l);
+        letter-spacing: 2px;
+        font-weight: 600;
+        background-color: var(--clr-body);
+        border: none;
+        border-radius: var(--sp-l);
+        color: var(--clr-main);
+        cursor: pointer;
+        transition: .3s all;
+
+        &:active{
+          scale: 0.9;
+        }
+
+      }
+
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

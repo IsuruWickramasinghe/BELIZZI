@@ -1,0 +1,24 @@
+.store{
+  width: 100%;
+  height: calc(100dvh - var(--header));
+  display: flex;
+  
+  .sidebar{
+    background-color: var(--clr-bg);
+    width: 150px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    .sidebar-item{
+      padding: var(--sp-s);
+      width: inherit;
+      text-decoration: none;
+    }
+  }
+
+  .shop-items{
+    padding: var(--sp-s);
+    display: flex;
+    flex-wrap: wrap;
+  }
+}

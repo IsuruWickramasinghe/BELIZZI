@@ -1,0 +1,20 @@
+.store-items{
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  padding-bottom: var(--sp-m);
+  gap: var(--sp-m);
+  height: calc(98dvh - var(--header));
+  overflow: hidden;
+  overflow-y: scroll;
+}
+.store-items::-webkit-scrollbar{
+  background-color: #26272900;
+  width: 3px;
+}
+.store-items::-webkit-scrollbar-thumb{
+  background-color: var(--clr-main);
+}
+.store-items::-webkit-scrollbar-thumb:hover{
+  background-color: var(--clr-snd);
+}
