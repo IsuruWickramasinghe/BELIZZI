@@ -10,12 +10,18 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@sanity/client": "^6.18.2",
+    "@sanity/image-url": "^1.0.2",
+    "@stripe/react-stripe-js": "^2.7.1",
+    "@stripe/stripe-js": "^3.4.0",
     "axios": "^1.6.8",
+    "dotenv": "^16.4.5",
     "less": "^4.2.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.23.1",
-    "remixicon": "^4.2.0"
+    "remixicon": "^4.2.0",
+    "stripe": "^15.7.0"
   },
   "devDependencies": {
     "@types/react": "^18.2.66",

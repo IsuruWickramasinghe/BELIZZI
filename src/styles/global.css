@@ -40,7 +40,7 @@ body.storeTheme{
 }
 *{
   box-sizing: border-box;
-
+  /* outline: auto; */
 }
 #root{
   overflow: hidden;

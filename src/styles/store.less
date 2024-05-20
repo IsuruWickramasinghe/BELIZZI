@@ -1,24 +1,114 @@
-.store{
+.store {
   width: 100%;
   height: calc(100dvh - var(--header));
   display: flex;
-  
-  .sidebar{
-    background-color: var(--clr-bg);
+
+  .sidebar {
+    background-color: var(--clr-snd);
     width: 150px;
     height: 100%;
     display: flex;
     flex-direction: column;
-    .sidebar-item{
+    transition: 0.3s all;
+    position: relative;
+    .sidebar-item {
       padding: var(--sp-s);
       width: inherit;
       text-decoration: none;
+      color: var(--clr-bg);
+    }
+    .active {
+      background-color: #fff;
+      color: var(--clr-title);
     }
   }
 
-  .shop-items{
+  .shop-items {
     padding: var(--sp-s);
     display: flex;
     flex-wrap: wrap;
+  }
+}
+
+.single-item {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  align-items: flex-start;
+  justify-content: space-evenly;
+  padding: var(--sp-m);
+
+  .img-wrapper {
+    width: 35%;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .item-details-wrapper {
+    display: grid;
+    gap: var(--sp-s);
+    width: 40%;
+
+    .item-title {
+      font-size: var(--fs-xl);
+      font-weight: 600;
+      letter-spacing: 2px;
+      text-decoration: underline;
+    }
+    .item-price {
+      letter-spacing: 2px;
+      font-weight: 100;
+    }
+    .item-desc {
+      div {
+        font-weight: 600;
+        letter-spacing: 2px;
+        text-decoration: underline;
+      }
+      p {
+        font-weight: 100;
+        letter-spacing: 1px;
+        font-size: var(--fs-m);
+      }
+    }
+    .item-quantity {
+      display: grid;
+      padding: var(--sp-s);
+      gap: var(--sp-m);
+      .select-quantity {
+        display: flex;
+        button,
+        div {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          padding: var(--sp-s);
+          aspect-ratio: 1/1;
+        }
+      }
+    }
+    .store-btns {
+      padding: var(--sp-s);
+      button {
+        display: flex;
+        justify-content: space-evenly;
+        border: none;
+        padding: var(--sp-s);
+        width: 250px;
+        border-radius: var(--sp-xl);
+        font-weight: 700;
+        letter-spacing: 1px;
+        background-color: var(--clr-main);
+        color: var(--clr-bg);
+        cursor: pointer;
+        transition: 0.3s all;
+        &:active {
+          scale: 0.9;
+        }
+      }
+    }
   }
 }

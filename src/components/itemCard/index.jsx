@@ -1,22 +1,23 @@
 import React from "react";
 import "../../styles/itemCard.less";
 import { Link } from "react-router-dom";
+import { urlFor } from "../../lib/client";
 
-function ItemCard({ itemType }) {
+function ItemCard({ item }) {
   return (
     <div className="item-card">
       <div className="item-img-wrapper">
         <img
-          src="https://5.imimg.com/data5/ANDROID/Default/2021/7/OH/LK/BB/133083157/screenshot-20210705-201448-google-jpg-500x500.jpg"
+          src={urlFor(item.image[0])}
           alt="img"
         />
       </div>
-      <div className="item-title">Item Title dsjhvb kdjfgh adkjga</div>
-      <div className="item-pric">Rs.2500.00</div>
+      <div className="item-title">{item.name}</div>
+      <div className="item-pric">Rs.{item.price}.00</div>
       <div className="item-ratings">
         3.5 <i className="ri-star-fill"></i>
-      </div>
-      <Link to={`/items/store/${'isuru'}`} className="item-add-cart">
+      </div>  
+      <Link to={`/items/store/${item.slug.current}`} className="item-add-cart">
         <i className="ri-shopping-cart-line"></i>
       </Link>
     </div>

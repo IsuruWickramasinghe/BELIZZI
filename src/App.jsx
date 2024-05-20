@@ -3,7 +3,9 @@ import OuterRoutes from "./Routes/Routes";
 
 function App() {
   return (
+    <>
     <OuterRoutes />
+    </>
   );
 }
 

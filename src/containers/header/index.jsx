@@ -1,13 +1,19 @@
 import React, { useEffect } from "react";
 import { NavLink, useLocation } from "react-router-dom";
 import "../../styles/header.less";
+import { useStateContext } from "../../context/StateContext";
 
 function Header() {
   const { pathname } = useLocation();
+  const { totalQuantities } = useStateContext();
 
   useEffect(() => {
     const root = document.getElementById("body");
-    if (pathname.startsWith("/store") || pathname.startsWith('/cart') || pathname.startsWith('/items')) {
+    if (
+      pathname.startsWith("/store") ||
+      pathname.startsWith("/cart") ||
+      pathname.startsWith("/items")
+    ) {
       root.classList.add("storeTheme");
     } else {
       root.classList.remove("storeTheme");
@@ -28,7 +34,7 @@ function Header() {
         </NavLink>
       </nav>
       <NavLink className="cart" to="/cart">
-        <i className="ri-shopping-cart-line"></i> 10
+        <i className="ri-shopping-cart-line"></i> {totalQuantities}
       </NavLink>
     </header>
   );
