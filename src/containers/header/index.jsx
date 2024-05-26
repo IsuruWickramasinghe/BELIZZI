@@ -33,9 +33,14 @@ function Header() {
           Store
         </NavLink>
       </nav>
-      <NavLink className="cart" to="/cart">
-        <i className="ri-shopping-cart-line"></i> {totalQuantities}
-      </NavLink>
+      <div className="right-section">
+        <NavLink className="profile" to="/sign-in">
+          <i className="ri-account-circle-line"></i>
+        </NavLink>
+        <NavLink className="cart" to="/cart">
+          <i className="ri-shopping-cart-line"></i> {totalQuantities}
+        </NavLink>
+      </div>
     </header>
   );
 }

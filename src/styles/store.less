@@ -16,6 +16,7 @@
       width: inherit;
       text-decoration: none;
       color: var(--clr-bg);
+      border-bottom: 1px solid var(--clr-bg);
     }
     .active {
       background-color: #fff;
@@ -25,8 +26,30 @@
 
   .shop-items {
     padding: var(--sp-s);
+    display: grid;
+    width: 100%;
+    place-items: center;
+    gap: var(--sp-s);
+
+  }
+  
+  .search-bar{
+    width: 100%;
     display: flex;
-    flex-wrap: wrap;
+    padding: var(--sp-s);
+    justify-content: center;
+    align-items: center;
+
+    input{
+      border: none;
+      outline: solid var(--clr-main);
+      padding: var(--sp-s);
+      border-radius: var(--sp-l);
+      max-width: 400px;
+      width: 100%;
+      font-size: var(--fs-m);
+      letter-spacing: 1px;
+    }
   }
 }
 

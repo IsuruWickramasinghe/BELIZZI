@@ -6,33 +6,66 @@ import { useStateContext } from "../../context/StateContext";
 import { useLocation } from "react-router-dom";
 
 function StoreItems() {
-  const { products } = useStateContext();
-  const [filterProducts, setFilterProducts] = useState([]);
   const { pathname } = useLocation();
+  const { products } = useStateContext();
+  const [productsCategory, setProductsCategory] = useState([]);
+  const [filteredProducts, setFilteredProducts] = useState([]);
+  const [search, setSearch] = useState("");
 
   useEffect(() => {
-    if (pathname === "/store/crochets") {
-      const docs = products.filter((item) => item.category === "chochet");
-      setFilterProducts(docs);
-      return;
-    }
-    if (pathname === "/store/digital-arts") {
-      const docs = products.filter((item) => item.category === "digitalArts");
-      setFilterProducts(docs);
-      return;
-    }
-    if (pathname === "/store/wooden-statues") {
-      const docs = products.filter((item) => item.category === "woodenStatues");
-      setFilterProducts(docs);
-      return;
-    }
+    if (pathname === "/store/crochets")
+      return setProductsCategory(
+        products.filter((item) => item.category === "chochet")
+      );
+    if (pathname === "/store/digital-arts")
+      return setProductsCategory(
+        products.filter((item) => item.category === "digitalArts")
+      );
+    if (pathname === "/store/wooden-statues")
+      return setProductsCategory(
+        products.filter((item) => item.category === "woodenStatues")
+      );
+  }, [pathname, products, search]);
+
+  useEffect(() => {
+    setSearch("");
   }, [pathname]);
 
+  useEffect(() => {
+    const filterItem = productsCategory.filter((item) =>
+      item.name.toLocaleLowerCase().includes(search.toLocaleLowerCase())
+    );
+    setFilteredProducts(filterItem);
+  }, [search]);
+
   return (
-    <div className="store-items">
-      {filterProducts &&
-        filterProducts?.map((item) => <ItemCard item={item} key={item.slug.current} />)}
-    </div>
+    <>
+      <div className="search-bar">
+        <input
+          type="text"
+          placeholder="Search 🔎"
+          value={search}
+          onChange={(e) => {
+            setSearch(e.target.value);
+          }}
+        />
+      </div>
+      {search === "" ? (
+        <div className="store-items">
+          {productsCategory &&
+            productsCategory?.map((item) => (
+              <ItemCard item={item} key={item.slug.current} />
+            ))}
+        </div>
+      ) : (
+        <div className="store-items">
+          {filteredProducts &&
+            filteredProducts?.map((item) => (
+              <ItemCard item={item} key={item.slug.current} />
+            ))}
+        </div>
+      )}
+    </>
   );
 }
 

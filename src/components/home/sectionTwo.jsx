@@ -10,22 +10,22 @@ function SectionTwo() {
 
         <div className="sets">
           <div className="set-1">
-            <h4><i class="ri-mail-send-line"></i></h4>
+            <h4><i className="ri-mail-send-line"></i></h4>
             <h4>Fast Delivery</h4>
             <p>Choose us for fast delivery, exceptional expertise, and dedicated customer support.</p>
           </div>
           <div className="set-2">
-            <h4><i class="ri-chat-3-line"></i></h4>
+            <h4><i className="ri-chat-3-line"></i></h4>
             <h4>Communication</h4>
             <p>Choose us for fast delivery, clear communication, and exceptional expertise.</p>
           </div>
           <div className="set-3">
-            <h4><i class="ri-paint-line"></i></h4>
+            <h4><i className="ri-paint-line"></i></h4>
             <h4>Creativity </h4>
             <p>Choose us for fast delivery, clear communication, and unparalleled creativity.</p>
           </div>
           <div className="set-4">
-            <h4><i class="ri-rotate-lock-line"></i></h4>
+            <h4><i className="ri-rotate-lock-line"></i></h4>
             <h4>Security </h4>
             <p>Choose us for fast delivery, clear communication, and top-tier security measures.</p>
           </div>

@@ -59,3 +59,22 @@ body{
 main{
   margin-top: var(--header);
 }
+
+.success-wrapper{
+  padding: var(--sp-m);
+  text-align: center;
+  display: grid;
+  gap: var(--sp-l);
+}
+.shopping{
+  padding: var(--sp-s);
+  border: none;
+  background-color: var(--clr-main);
+  color: var(--clr-bg);
+  letter-spacing: 1px;
+  border-radius: 6px;
+  transition: .3s all;
+}
+.shopping:active{
+  scale: 0.9;
+}

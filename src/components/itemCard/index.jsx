@@ -14,8 +14,8 @@ function ItemCard({ item }) {
       </div>
       <div className="item-title">{item.name}</div>
       <div className="item-pric">Rs.{item.price}.00</div>
-      <div className="item-ratings">
-        3.5 <i className="ri-star-fill"></i>
+      <div className="item-pric">
+        qty : {item.qty}
       </div>  
       <Link to={`/items/store/${item.slug.current}`} className="item-add-cart">
         <i className="ri-shopping-cart-line"></i>

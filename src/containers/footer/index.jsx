@@ -9,15 +9,15 @@ function Footer() {
           Don't hesitate to get in touch for fast, secure, and creative solutions!
         </span>
         <div className="icons">
-          <i class="ri-facebook-line"></i>
-          <i class="ri-instagram-line"></i>
-          <i class="ri-whatsapp-line"></i>
-          <i class="ri-telegram-line"></i>
+          <i className="ri-facebook-line"></i>
+          <i className="ri-instagram-line"></i>
+          <i className="ri-whatsapp-line"></i>
+          <i className="ri-telegram-line"></i>
         </div>
       </section>
       <div className="footer-cards">
         <div className="card-one">
-          <i class="ri-mail-line"></i>
+          <i className="ri-mail-line"></i>
           <h4>Send mail to contact</h4>
           <p>"Reach out for fast, secure, and creative solutions. Contact us now!"</p>
         </div>
